@@ -18,12 +18,12 @@
     }
 
     function classicon() {
-        for (var maerialicon = alphaicon.querySelectorAll("[data-icon]"), a = 0; a < maerialicon.length; a++) {
+        for (var maerialicon = alphaicon.querySelectorAll("[icon]"), a = 0; a < maerialicon.length; a++) {
             var classicon = maerialicon[a],
-                svgicon = classicon.getAttribute("data-icon"),
+                svgicon = classicon.getAttribute("icon"),
                 bildicon = {
                     "class": classicon.className,
-                    size: classicon.getAttribute("data-size")
+                    size: classicon.getAttribute("size")
                 };
             classicon.insertAdjacentHTML("beforebegin", icondilt(svgicon, bildicon)), classicon.parentNode.removeChild(classicon)
         }
