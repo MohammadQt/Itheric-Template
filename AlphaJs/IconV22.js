@@ -18,12 +18,12 @@
     }
 
     function iconClass() {
-        for (var iconEx = icons.querySelectorAll("[icon]"), a = 0; a < iconEx.length; a++) {
+        for (var iconEx = icons.querySelectorAll("[data-icon]"), a = 0; a < iconEx.length; a++) {
             var iconClass = iconEx[a],
-                iconSvg = iconClass.getAttribute("icon"),
+                iconSvg = iconClass.getAttribute("data-icon"),
                 iconSpan = {
                     "class": iconClass.className,
-                    size: iconClass.getAttribute("size")
+                    size: iconClass.getAttribute("data-size")
                 };
             iconClass.insertAdjacentHTML("beforebegin", t(iconSvg, iconSpan)), iconClass.parentNode.removeChild(iconClass)
         }
